@@ -19,7 +19,7 @@ class _PipWidgetState extends State<PipWidget> with WidgetsBindingObserver {
       bool? isInPipMode = await FlutterPip.isInPictureInPictureMode();
       widget.onResume!(isInPipMode);
       return;
-    }, suspendingCallBack: () {
+    }, suspendingCallBack: () async {
       widget.onSuspending!();
     });
     super.initState();
