@@ -21,7 +21,6 @@ class _PipWidgetState extends State<PipWidget> with WidgetsBindingObserver {
       return;
     }, suspendingCallBack: () {
       widget.onSuspending!();
-      return;
     });
     super.initState();
     WidgetsBinding.instance!.addObserver(observer);
